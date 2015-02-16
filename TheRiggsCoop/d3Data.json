@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "label": "Fluffy",
+      "n": 20
+    },
+    {
+      "label": "Sunshine",
+      "n": 30
+    },
+    {
+      "label": "Buttercup",
+      "n": 10
+    },
+    {
+      "label": "Blackie",
+      "n": 5
+    }
+  ]
+}

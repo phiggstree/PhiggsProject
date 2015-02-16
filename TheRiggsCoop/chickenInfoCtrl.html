@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>JavaScript &amp; jQuery - Chapter 9: APIs - Simple Angular Example</title>
+    <link rel="stylesheet" href="css/css.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="js/jscript.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+
+    <style>
+        .bar.Fluffy { fill: #ffffcc; }
+        .bar.Buttercup { fill: #ffcccc; }
+        .bar.Sunshine { fill: #b0fff0; }
+        .bar.Blackie { fill: #156f80; }
+    </style>
+
+
+</head>
+<body ng-app="">
+<table>
+    <h2>Coop Dela Riggs - Data & Charts</h2>
+    <div class="third">
+    <div class="two-thirds" id="timetable">
+        <table ng-controller ="ChickenInfoCtrl">
+            <tr><h2>  Chickens Inventory</h2></tr>
+            <tr> <td> Item </td><td> Picture</td><td> Name</td> <td> Breed</td> <td> Description</td> </tr>
+            <tr ng-repeat="chicken in chickens">
+                <td> {{chicken.item }}</td>
+                <td> {{chicken.img }}</td>
+                <td> {{chicken.name }} </td>
+                <td> {{chicken.breed }}</td>
+                <td> {{chicken.description }}</td>
+            </tr>
+        </table>
+    </div>
+    </div>
+</table>
+<table>
+    <h2> Eggs Produced Per Chicken</h2>
+
+            <div id="chart"></div>
+            <script>
+            var w = 900,
+            h = 200;
+            //setup chart object
+            var svg = d3.select("#chart")
+            .append("svg")
+            .attr("width", w)
+            .attr("height", h);
+
+            //get data
+            d3.json("d3Data.json", function(json) {
+                    var data = json.items;
+
+                    var max_n = 0;
+                    for (var d in data) {
+                    max_n = Math.max(data[d].n, max_n);
+                    }
+
+                    var dx = w / max_n;
+                    var dy = h / data.length;
+
+                    // bars
+                    var bars = svg.selectAll(".bar")
+                    .data(data)
+                    .enter()
+                    .append("rect")
+                    .attr("class", function(d, i) {return "bar " + d.label;})
+                    .attr("x", function(d, i) {return 0;})
+                    .attr("y", function(d, i) {return dy*i;})
+                    .attr("width", function(d, i) {return dx*d.n})
+                    .attr("height", dy);
+
+                    // labels
+                    var text = svg.selectAll("text")
+                    .data(data)
+                    .enter()
+                    .append("text")
+                    .attr("class", function(d, i) {return "label " + d.label;})
+                    .attr("x", 5)
+                    .attr("y", function(d, i) {return dy*i + 15;})
+                    .text( function(d) {return d.label + " (" + d.n  + ")";})
+                    .attr("font-size", "20px")
+                    .style("font-weight", "bold");
+            });
+
+            </script>
+</table>
+<table>
+    Making a SVG circle
+    <script>
+        //data arrays -- tbd: need to move this to jscript.js
+        circleRadii = [40,20,10,5]
+        //create DOM object (svg)
+        var svgContainer = d3.select("body")
+                .append("svg")
+                .attr("width",600)
+                .attr("height",100);
+
+        //add data array to object circle
+
+        var circles = svgContainer.selectAll("circle")
+                .data(circleRadii)
+                .enter()
+                .append("circle");
+
+        //log to console to see
+        console.log(d3.select("bpdy").append("svg")
+                .attr("width", 200).attr("height", 200)
+                .selectAll("circle").data(circleRadii)
+                .enter().append("circle"));
+        //add circle attributes
+        var circleAttributes = circles
+                        .attr("cx",50)
+                        .attr("cy",50)
+                        .attr("r", function(d) {return d;})
+                        .style("fill",function(d){
+                         var returnColor;
+                            if (d===40) {returnColor="green";}
+                            else if (d===20) {returnColor="purple";}
+                            else if (d===10) {returnColor="red";}
+                            else if (d===5) {returnColor="yellow"}
+                            return returnColor;
+                            })
+        ;
+
+
+    </script>
+</table>
+<br>
+<table>
+    Flights (origination city to destination city) -
+    Hierarchical Edge Bundling
+    <script>
+        //get json data arrays
+
+    </script>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+"eggs": [
+        {
+        "chicken": "fluffy",
+        "qty": "19"
+        },
+        {
+        "chicken": "sunshine",
+        "qty": "19"
+        },
+        {
+        "chicken": "buttercup",
+        "qty": "25"
+        },
+        {
+        "chicken": "cocoa",
+        "qty": "30"
+        },
+        {
+        "chicken": "lucky",
+        "qty": "45"
+        }
+  ]
+}

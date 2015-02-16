@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>JavaScript &amp; jQuery - Chapter 9: APIs - Simple Angular Example</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+    <script src="test_spartajs.js"></script>
+</head>
+
+<body ng-app="sparta">
+<div class="container" ng-controller="CompetitionController">
+
+    <div ng-repeat="activity in activities">
+        <div ng-show="activity.isEdited">
+            <input type="text" ng-model="activity.name"/> - <input type="text" ng-model="activity.points"/>
+            <button ng-click="activity.isEdited = false">Ok</button>
+        </div>
+        <div ng-hide="activity.isEdited">
+            {{activity.name}} - {{activity.points}}
+            <button ng-click="activity.isEdited = true">Edit</button>
+            <button ng-click="removeActivity(activity)">Remove</button>
+        </div>
+    </div>
+    <div class="addNew">
+        <button ng-click="addNewActivity()">Add New</button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+{
+"chickens": [
+        {
+        "item": "CDR001",
+        "name": "Fluffy", 
+        "img": "CDR001-fluffy",          
+        "poultry": "Bantam",
+        "breed": "Acona",
+          "description": "Add Description Here"
+        },
+        {
+        "item": "CDR002",
+        "name": "Sunshine",
+        "img": "CDR002-sunshine",
+        "poultry": "Bantam",
+        "breed": "Australorp",
+          "description": "Add Description Here"
+        }
+        ,
+        {
+        "item": "CDR003",
+        "name": "Buttercup",
+        "img": "CDR003-buttercup",          
+        "poultry": "Bantam",
+        "breed": "Dutch",
+          "description": "Add Description Here"
+        }
+        ,
+        {
+        "item": "CDR004",
+        "name": "Goldie",
+        "img": "CDR004-goldie",
+        "poultry": "Bantam",
+        "breed": "Sussex",
+          "description": "Add Description Here"
+        }
+        ,
+        {
+        "item": "CDR005",
+        "name": "Blackie",
+        "img": "CDR005-blackie",
+        "poultry": "Bantam",
+        "breed": "Lamona",
+        "description": "Add Description Here"
+        }
+        ,
+        {
+        "item": "CDR006",
+        "name": "Cocoa",
+        "poultry": "Bantam", 
+        "img": "CDR006-cocoa",
+        "breed": "New Hampshire",
+          "description": "Add Description Here"
+        },
+        {
+        "item": "CDR007",
+        "name": "Java",
+        "img": "CDR007-java",
+        "poultry": "Bantam",
+        "breed": "Orpington",
+          "description": "Add Description Here"
+        }
+        ,
+        {
+        "item": "CDR008",
+        "name": "Lucky", 
+        "img": "CDR008-lucky",
+        "poultry": "Bantam",
+        "breed": "Vorkwerk",
+          "description": "Add Description Here"
+        }
+        ,
+        {
+        "item": "CDR009",
+        "name": "Jicama", 
+        "img": "CDR009-jicama",
+        "poultry": "Bantam",
+        "breed": "Welsummer",
+          "description": "Add Description Here"
+        }
+  ]
+}

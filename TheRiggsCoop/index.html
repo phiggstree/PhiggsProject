@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>JavaScript &amp; APIs - Simple Angular Example</title>
+    <link rel="stylesheet" href="css/css.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+</head>
+
+<body>
+<header><h1>THE RIGGS BUS</h1>
+        <h5 align="right"><a href="chickenInfoCtrl.html"><img src="img/map.png"></a>
+            <a href="test_sparta.html"><img src="img/report.png"></a>
+        </h5>
+
+</header>
+<div class="third">
+    <p class="welcome">Tell your friends to join us for an awesome day of
+        chirping at Coop dela Riggs ...</p>
+    <form>
+        To:<br>
+        <input ng-model="name" type="text" /><br>
+        Email: <br> <input ng-model="email" type="text" /><br>
+        Message:<br>
+        <textarea ng-model="message"></textarea>
+        <input type="submit" value="send message" />
+
+    </form>
+</div>
+
+<div class="two-thirds">
+    <div class="postcard">
+        <div>{{ name }}</div>
+        <p>{{ message }}</p>
+    </div>
+</div>
+</body>
+</html>
